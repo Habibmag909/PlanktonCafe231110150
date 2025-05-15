@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Us - Plankton Cafe</title>
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body {
+      /* Ganti background jadi gambar cafe full halaman */
+      background: url('gambar/bg12.png') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      line-height: 1.6;
+      position: relative;
+      min-height: 100vh;
+    }
+    /* Overlay gelap supaya teks mudah dibaca */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: rgba(0,0,0,0.7);
+      z-index: -1;
+    }
+
+    /* Navbar */
+    nav {
+      background-color: rgba(34,34,34,0.9);
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav .logo {
+      font-weight: bold;
+      font-size: 1.5rem;
+      color: #f39c12;
+      cursor: default;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      align-items: center;
+    }
+    nav ul li {
+      position: relative;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: color 0.3s ease;
+    }
+    nav ul li a:hover,
+    nav ul li a.active {
+      color: #f39c12;
+    }
+
+    nav ul li .dropdown {
+      display: none;
+      position: absolute;
+      background-color: rgba(34,34,34,0.95);
+      top: 35px;
+      left: 0;
+      min-width: 150px;
+      border-radius: 4px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.8);
+    }
+    nav ul li:hover .dropdown {
+      display: block;
+    }
+    nav ul li .dropdown a {
+      display: block;
+      padding: 10px 15px;
+      font-weight: normal;
+      color: white;
+    }
+    nav ul li .dropdown a:hover {
+      background-color: #f39c12;
+      color: #111;
+    }
+
+    /* Container utama */
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: rgba(17,17,17,0.75);
+      border-radius: 15px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.8);
+    }
+
+    h1 {
+      font-size: 3rem;
+      color: #f39c12;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .about-text {
+      font-size: 1.2rem;
+      margin-bottom: 35px;
+      text-align: center;
+      color: #eee;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.4rem;
+      }
+      .about-text {
+        font-size: 1rem;
+      }
+      .container {
+        margin: 20px 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">Plankton Cafe</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="aboutus.html">About Us</a></li>
+      <li><a href="menu.html">Menu & Pricing</a></li>
+      <li>
+        <a href="#">DLL &#x25BC;</a>
+        <div class="dropdown">
+          <a href="gallery.html">Gallery</a>
+          <a href="event.html">Events</a>
+        </div>
+      </li>
+      <li><a href="contactus.html">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h1>About Plankton Cafe</h1>
+    <p class="about-text">
+      Plankton Cafe berdiri sejak tahun 2018 dengan tujuan menjadi tempat berkumpul yang nyaman dan menyajikan kopi terbaik dengan bahan berkualitas. Kami percaya bahwa kopi yang nikmat bisa menginspirasi hari Anda.
+      <br /><br />
+      Dengan konsep cozy dan modern, Plankton Cafe menghadirkan suasana hangat untuk semua kalangan, mulai dari pelajar, pekerja, hingga pecinta kopi sejati. Kami juga rutin mengadakan event musik akustik dan menyediakan coworking space yang nyaman.
+    </p>
+  </div>
+
+</body>
+</html>

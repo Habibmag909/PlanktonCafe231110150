@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Events - Plankton Cafe</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body {
+      background-image: url('gambar/BGEvent.png');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: white;
+      line-height: 1.6;
+      min-height: 100vh;
+      position: relative;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.7);
+      z-index: -1;
+    }
+
+    /* Navbar */
+    nav {
+      background-color: #222;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav .logo {
+      font-weight: bold;
+      font-size: 1.5rem;
+      color: #f39c12;
+      cursor: default;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      align-items: center;
+    }
+    nav ul li {
+      position: relative;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: color 0.3s ease;
+    }
+    nav ul li a:hover,
+    nav ul li a.active {
+      color: #f39c12;
+    }
+    nav ul li .dropdown {
+      display: none;
+      position: absolute;
+      background-color: #222;
+      top: 35px;
+      left: 0;
+      min-width: 150px;
+      border-radius: 4px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.8);
+    }
+    nav ul li:hover .dropdown {
+      display: block;
+    }
+    nav ul li .dropdown a {
+      display: block;
+      padding: 10px 15px;
+      font-weight: normal;
+      color: white;
+    }
+    nav ul li .dropdown a:hover {
+      background-color: #f39c12;
+      color: #111;
+    }
+
+    /* Events */
+    h1 {
+      text-align: center;
+      color: #f39c12;
+      margin: 40px 0 30px;
+      font-size: 3rem;
+    }
+    .events-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px 60px;
+      display: grid;
+      gap: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    .event-card {
+      background-color: #222;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(243, 156, 18, 0.5);
+      transition: transform 0.3s ease;
+    }
+    .event-card:hover {
+      transform: translateY(-5px);
+    }
+    .event-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .event-content {
+      padding: 20px;
+    }
+    .event-date {
+      color: #f39c12;
+      font-weight: bold;
+      font-size: 0.95rem;
+      margin-bottom: 8px;
+    }
+    .event-title {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+    }
+    .event-description {
+      font-size: 0.95rem;
+      color: #ccc;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">Plankton Cafe</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="aboutus.html">About Us</a></li>
+      <li><a href="menu.html">Menu & Pricing</a></li>
+      <li>
+        <a href="#">DLL &#x25BC;</a>
+        <div class="dropdown">
+          <a href="gallery.html">Gallery</a>
+          <a href="event.html">Events</a>
+        </div>
+      </li>
+      <li><a href="contactus.html">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <h1>Upcoming Events</h1>
+
+  <div class="events-container">
+    <div class="event-card">
+      <img src="gambar/live music.png" alt="Live Music Night">
+      <div class="event-content">
+        <div class="event-date">Jumat, 24 Mei 2025</div>
+        <div class="event-title">Live Music Night</div>
+        <div class="event-description">Nikmati malam santai dengan musik akustik dan kopi hangat di Plankton Cafe.</div>
+      </div>
+    </div>
+    <div class="event-card">
+      <img src="gambar/latteart.png" alt="Latte Art Workshop">
+      <div class="event-content">
+        <div class="event-date">Sabtu, 1 Juni 2025</div>
+        <div class="event-title">Latte Art Workshop</div>
+        <div class="event-description">Belajar seni menghias kopi dari barista profesional. Terbuka untuk umum!</div>
+      </div>
+    </div>
+    <div class="event-card">
+      <img src="gambar/testing.png" alt="Coffee Tasting Day">
+      <div class="event-content">
+        <div class="event-date">Minggu, 9 Juni 2025</div>
+        <div class="event-title">Coffee Tasting Day</div>
+        <div class="event-description">Cicipi berbagai varian kopi dari berbagai daerah dan beri penilaian favoritmu!</div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

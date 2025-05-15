@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gallery - Plankton Cafe</title>
+  <style>
+    /* Reset dan styling dasar */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body {
+      background-color: #111;
+      color: white;
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    /* Navbar */
+    nav {
+      background-color: #222;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav .logo {
+      font-weight: bold;
+      font-size: 1.5rem;
+      color: #f39c12; /* orange */
+      cursor: default;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      align-items: center;
+    }
+    nav ul li {
+      position: relative;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: color 0.3s ease;
+    }
+    nav ul li a:hover,
+    nav ul li a.active {
+      color: #f39c12;
+    }
+
+    /* Dropdown menu for Pages */
+    nav ul li .dropdown {
+      display: none;
+      position: absolute;
+      background-color: #222;
+      top: 35px;
+      left: 0;
+      min-width: 150px;
+      border-radius: 4px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.8);
+    }
+    nav ul li:hover .dropdown {
+      display: block;
+    }
+    nav ul li .dropdown a {
+      display: block;
+      padding: 10px 15px;
+      font-weight: normal;
+      color: white;
+    }
+    nav ul li .dropdown a:hover {
+      background-color: #f39c12;
+      color: #111;
+    }
+
+    /* Gallery Section */
+    h1 {
+      text-align: center;
+      color: #f39c12;
+      margin: 40px 0 30px;
+      font-size: 3rem;
+    }
+
+    /* Grid gallery */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 1100px;
+      margin: 0 auto 60px;
+      padding: 0 20px;
+    }
+    .gallery-item {
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(243, 156, 18, 0.6);
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      background-color: #222;
+    }
+    .gallery-item:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 25px rgba(243, 156, 18, 0.9);
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      display: block;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+    .gallery-item .caption {
+      padding: 10px 15px;
+      color: #f39c12;
+      font-weight: 600;
+      text-align: center;
+      font-size: 1.1rem;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      background-color: #222;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav {
+        padding: 15px 15px;
+      }
+      nav ul {
+        gap: 15px;
+      }
+      h1 {
+        font-size: 2.4rem;
+        margin: 30px 0 20px;
+      }
+      .gallery-item img {
+        height: 140px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">Plankton Cafe</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="aboutus.html">About Us</a></li>
+      <li><a href="menu.html">Menu & Pricing</a></li>
+      <li>
+        <a href="#">DLL &#x25BC;</a>
+        <div class="dropdown">
+          <a href="gallery.html">Gallery</a>
+          <a href="event.html">Events</a>
+        </div>
+      </li>
+      <li><a href="contactus.html">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <h1>Gallery Plankton Cafe</h1>
+
+  <div class="gallery">
+    <div class="gallery-item">
+      <img src="gambar/latte3.png" alt="Latte Art" />
+      <div class="caption">Latte Art</div>
+    </div>
+    <div class="gallery-item">
+      <img src="gambar/coffe.png" alt="Coffee Cup" />
+      <div class="caption">Coffee Cup</div>
+    </div>
+    <div class="gallery-item">
+      <img src="gambar/pastris.png" alt="Pastries" />
+      <div class="caption">Pastries</div>
+    </div>
+    <div class="gallery-item">
+      <img src="gambar/coffe-beans.png" alt="Coffee Beans" />
+      <div class="caption">Coffee Beans</div>
+    </div>
+    <div class="gallery-item">
+      <img src="gambar/interior.png" alt="Cafe Interior" />
+      <div class="caption">Cafe Interior</div>
+    </div>
+    <div class="gallery-item">
+      <img src="gambar/Chocolate Muffin.png" alt="Chocolate Muffin" />
+      <div class="caption">Chocolate Muffin</div>
+    </div>
+    <div class="gallery-item">
+      <img src="gambar/barista.png" alt="Barista Making Coffee" />
+      <div class="caption">Barista Making Coffee</div>
+    </div>
+    <div class="gallery-item">
+      <img src="gambar/desert.png" alt="Coffee and Dessert" />
+      <div class="caption">Coffee and Dessert</div>
+    </div>
+  </div>
+
+</body>
+</html>
